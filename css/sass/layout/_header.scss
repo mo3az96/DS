@@ -32,7 +32,7 @@ header {
 
 
 .menubtn {
-    display: flex;
+    display: none;
     align-items: flex-end;
     flex-direction: column;
     justify-content: flex-start;
@@ -41,6 +41,10 @@ header {
     position: absolute;
     z-index: 999;
     right: 15px;
+
+    @include xs {
+        display: flex;
+    }
 
     span {
         width: 25px;

@@ -643,7 +643,7 @@ header {
 }
 
 .menubtn {
-  display: flex;
+  display: none;
   align-items: flex-end;
   flex-direction: column;
   justify-content: flex-start;
@@ -652,6 +652,11 @@ header {
   position: absolute;
   z-index: 999;
   right: 15px;
+}
+@media (max-width: 767px) {
+  .menubtn {
+    display: flex;
+  }
 }
 .menubtn span {
   width: 25px;
