@@ -7,9 +7,8 @@ header {
 
 .header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    padding-top: 40px;
 
     @include xs {
         padding-top: 10px;
@@ -20,6 +19,8 @@ header {
     width: 213px;
     display: flex;
     align-items: center;
+    padding-top: 40px;
+
 
     @include lg {
         width: 150px;

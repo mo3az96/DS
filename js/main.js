@@ -5,7 +5,7 @@ $(document).ready(function () {
     $('.main-slider').owlCarousel({
         items: 1,
         margin: 30,
-        // autoplay: true,
+        autoplay: true,
         rtl: document.dir == 'rtl' ? true : false,
         loop: true,
         dots: true,
@@ -14,6 +14,7 @@ $(document).ready(function () {
     /////////Main Slider/////////
     $('.services-slider').owlCarousel({
         items: 3,
+        center: true,
         margin: 30,
         // autoplay: true,
         rtl: document.dir == 'rtl' ? true : false,

@@ -104,14 +104,10 @@
     position: relative;
     margin-top: 90px;
 
-    @include xs {
-        margin-top: 0;
-    }
-
     .services-bg {
-        position: absolute;
-        left: 15px;
-        z-index: -1;
+        @include xs {
+            display: none;
+        }
     }
 
     .sec-head {
@@ -120,16 +116,8 @@
 }
 
 .services-slider {
-    .item {
-        // width: 360px;
-        max-width: 100%;
-        margin: auto;
-
-        @include xs {
-            margin-top: -70px;
-        }
-
-        &.special {
+    .owl-item {
+        &.center {
             .item-info {
                 background-color: $black;
 
@@ -158,11 +146,24 @@
         }
     }
 
+    .item {
+        // width: 360px;
+        max-width: 100%;
+        margin: auto;
+
+        @include xs {
+            margin-top: -70px;
+        }
+
+
+    }
+
     .item-info {
         background-color: $text;
         padding-top: 150px;
         border: 2px solid #d4d5d9;
         padding: 150px 40px 90px;
+        @include transition(all 0.3s ease-in-out);
 
         .service-name {
             font-size: 20px;
@@ -170,6 +171,12 @@
             color: $black;
             text-align: center;
             margin-bottom: 40px;
+            max-width: 100%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            display: block;
+            overflow: hidden;
+            @include transition(all 0.3s ease-in-out);
         }
 
         .service-desc {
@@ -177,6 +184,8 @@
             color: $black;
             text-align: center;
             text-align: justify;
+            max-height: 88px;
+            overflow: hidden;
         }
 
         .read {
@@ -203,6 +212,7 @@
         position: relative;
         -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
         clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        @include transition(all 0.3s ease-in-out);
 
         &:after {
             content: "";
@@ -214,6 +224,7 @@
             left: 3px;
             right: 3px;
             bottom: 3px;
+            @include transition(all 0.3s ease-in-out);
             z-index: -1;
         }
 
@@ -266,16 +277,12 @@
 
     .news-bg {
         position: absolute;
-        bottom: -17px;
-        left: 15px;
-        z-index: 1;
-
-        @include sm {
-            left: -75px;
-        }
+        bottom: -2%;
+        left: 0;
+        width: 20%;
 
         @include xs {
-            left: -150px;
+            display: none;
         }
     }
 
@@ -327,6 +334,7 @@
         font-family: bold;
         color: $black;
         margin-bottom: 40px;
+
 
         @include sm {
             margin-bottom: 25px;
