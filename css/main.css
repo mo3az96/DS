@@ -835,6 +835,19 @@ header {
   right: 0;
   left: 0;
 }
+header.page-head {
+  position: relative;
+  background-color: #141414;
+  padding-bottom: 20px;
+}
+header.page-head .logo {
+  padding-top: 20px;
+}
+@media (max-width: 767px) {
+  header.page-head .logo {
+    padding: 0;
+  }
+}
 
 .header {
   display: flex;
@@ -922,6 +935,51 @@ header {
 }
 .menubtn.open:hover span {
   background-color: #141414;
+}
+
+.breadcrumb-sec {
+  position: relative;
+  background-color: #333;
+}
+
+ol.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  position: relative;
+  margin: 0;
+}
+@media (max-width: 767px) {
+  ol.breadcrumb {
+    height: 70px;
+  }
+}
+
+ol.breadcrumb li {
+  font-size: 20px;
+  color: #fff;
+  cursor: default;
+}
+
+ol.breadcrumb li.active {
+  color: #feed01;
+}
+
+ol.breadcrumb li a {
+  font-size: 20px;
+  color: #fff;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+ol.breadcrumb li a:hover {
+  color: #feed01;
 }
 
 .sec-head {
@@ -1270,6 +1328,71 @@ main .join:hover {
   .gallery-cont .more:hover {
     color: #141414;
   }
+}
+
+.home-about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 115px;
+}
+
+.home-about-text {
+  width: 40%;
+}
+@media (max-width: 767px) {
+  .home-about-text {
+    width: 100%;
+  }
+}
+
+.home-about-info {
+  color: #141414;
+  font-family: med;
+  font-size: 18px;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.home-about-img {
+  width: 50%;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+@media (max-width: 767px) {
+  .home-about-img {
+    width: 100%;
+    margin-top: 25px;
+  }
+}
+
+.page-about-cont {
+  padding-top: 85px;
+}
+@media (max-width: 767px) {
+  .page-about-cont {
+    padding-top: 35px;
+    padding-bottom: 50px;
+  }
+}
+.page-about-cont .home-about {
+  margin: 0;
+  align-items: flex-start;
+}
+.page-about-cont .home-about-text {
+  width: 50%;
+  margin-top: 50px;
+  margin-right: 30px;
+}
+@media (max-width: 767px) {
+  .page-about-cont .home-about-text {
+    width: 100%;
+  }
+}
+.page-about-cont .home-about-info {
+  margin-bottom: 15px;
 }
 
 footer {

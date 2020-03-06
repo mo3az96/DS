@@ -3,6 +3,20 @@ header {
     top: 0;
     right: 0;
     left: 0;
+
+    &.page-head {
+        position: relative;
+        background-color: $black;
+        padding-bottom: 20px;
+
+        .logo {
+            padding-top: 20px;
+
+            @include xs {
+                padding: 0;
+            }
+        }
+    }
 }
 
 .header {
