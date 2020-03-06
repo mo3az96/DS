@@ -2,7 +2,7 @@
     width: 350px;
     height: 50px;
     position: relative;
-    margin-top: 23px;
+    margin-top: 50px;
 
     @include xs {
         width: 100%;
@@ -14,16 +14,16 @@
     height: 100%;
     padding: 0 25px;
     border-radius: 10px;
-    color: #fff;
+    color: $black;
     font-size: 17px;
     border: 2px solid $text;
     @include transition(all 0.3s ease-in-out);
-    background-color: transparent;
+    background-color: $text;
     text-align: left;
 
 
     &::placeholder {
-        color: rgba(#fff, 0.52);
+        color: rgba($black, 0.52);
         font-size: 17px;
         text-align: left;
     }
@@ -38,7 +38,7 @@
 .newsletter-button {
     position: absolute;
     font-size: 20px;
-    color: #fff;
+    color: $black;
     right: 20px;
     top: 0;
     height: 100%;
@@ -59,4 +59,101 @@
         content: "\e907";
     }
 
+}
+
+///////////////////////////////////////////////////////////
+
+.input-label {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid $black;
+    color: $black;
+    font-size: 16px;
+    padding: 0 25px;
+    -moz-appearance: textfield;
+    transition: 0.2s ease all;
+    text-align: right;
+    resize: none;
+
+    #{$ltr} & {
+        text-align: left;
+    }
+
+
+
+    &:focus {
+        border-color: $yellow;
+    }
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        -webkit-appearance: none
+    }
+}
+
+.floating-label {
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba($black, 0.52);
+    font-size: 16px;
+    transition: 0.2s ease all;
+}
+
+.label-active {
+    top: 0;
+    left: 0;
+    font-size: 13px;
+    color: $black;
+}
+
+.textarea-label {
+    height: 100px;
+    resize: none;
+
+    .floating-label {
+        top: 15px;
+    }
+
+    .label-active {
+        top: 0;
+    }
+
+    .input {
+        padding: 25px;
+    }
+}
+
+.send {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    background-color: $yellow;
+    border-radius: 10px;
+    margin: auto;
+    font-size: 20px;
+    color: $black;
+    font-family: bold;
+    @include transition(all 0.3s ease-in-out);
+    position: relative;
+    border-radius: 5px;
+    border: 2px solid $yellow;
+
+    &:hover {
+        background-color: transparent;
+
+    }
 }
