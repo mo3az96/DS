@@ -1,5 +1,13 @@
 
-$(window).on("load", function () { });
+$(window).on("load", function () {
+    $(".loader").fadeOut(1000, function () {
+        $('body').css("overflow", "visible");
+        $('body').animate({
+            scrollTop: 0
+        }, 1);
+        new WOW().init();
+    });
+});
 $(document).ready(function () {
     /////////Main Slider/////////
     $('.main-slider').owlCarousel({

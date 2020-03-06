@@ -2,6 +2,7 @@ body {
     position: relative;
     font-family: tajwal;
     background-color: $grey;
+    overflow: hidden;
 
     &::-webkit-scrollbar {
         background-color: rgba($grey, 0.5);
