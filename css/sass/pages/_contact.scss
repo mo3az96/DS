@@ -28,6 +28,11 @@
     #{$ltr} & {
         padding-left: 25px;
         padding-right: 0;
+
+        @include xs {
+            padding: 0;
+            margin-top: 50px;
+        }
     }
 
     @include xs {

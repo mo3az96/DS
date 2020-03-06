@@ -1526,6 +1526,12 @@ html[dir=ltr] .contact-info {
   padding-right: 0;
 }
 @media (max-width: 767px) {
+  html[dir=ltr] .contact-info {
+    padding: 0;
+    margin-top: 50px;
+  }
+}
+@media (max-width: 767px) {
   .contact-info {
     padding: 0;
     margin-top: 50px;
