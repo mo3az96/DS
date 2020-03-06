@@ -1907,6 +1907,165 @@ html[dir=ltr] .contact-info {
   margin-bottom: 25px;
 }
 
+.gallery-page {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.gallery-page .gallery-img {
+  width: calc(100% / 3 - 15px);
+  margin-bottom: 30px;
+  margin-right: 15px;
+}
+@media (max-width: 992px) {
+  .gallery-page .gallery-img {
+    width: calc(100% / 2 - 15px);
+  }
+}
+@media (max-width: 767px) {
+  .gallery-page .gallery-img {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 992px) {
+  .gallery-page .gallery-img:nth-of-type(3n) {
+    margin-right: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .gallery-page .gallery-img:nth-of-type(3n) {
+    margin-right: 0;
+  }
+}
+@media (max-width: 992px) {
+  .gallery-page .gallery-img:nth-of-type(2n) {
+    margin-right: 0;
+  }
+}
+
+.gallery-img {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 300px;
+}
+.gallery-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  backface-visibility: hidden;
+}
+.gallery-img:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(20, 20, 20, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: "icomoon" !important;
+  content: "";
+  font-size: 48px;
+  visibility: hidden;
+  opacity: 0;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.gallery-img:hover img {
+  transform: scale(1.02);
+}
+.gallery-img:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.gallery-page-cont {
+  padding-top: 85px;
+}
+@media (max-width: 767px) {
+  .gallery-page-cont {
+    padding-top: 35px;
+    padding-bottom: 50px;
+  }
+}
+.gallery-page-cont .more:hover {
+  color: #141414;
+}
+
+.filter-slider-sec {
+  margin-bottom: 35px;
+}
+.filter-slider-sec .owl-nav {
+  width: 0;
+  height: 0;
+}
+.filter-slider-sec .owl-nav button[class^=owl-] {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  outline: none;
+  border: none;
+  color: rgba(20, 20, 20, 0.75);
+  font-size: 18px;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.filter-slider-sec .owl-nav button[class^=owl-].owl-next {
+  left: -10px;
+}
+.filter-slider-sec .owl-nav button[class^=owl-].owl-prev {
+  right: -10px;
+}
+.filter-slider-sec .owl-nav button[class^=owl-]:hover {
+  color: #feed01;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  padding: 0 15px;
+  white-space: nowrap;
+  background-color: transparent;
+  color: #141414;
+  font-family: med;
+  font-size: 16px;
+  border: 2px solid rgba(20, 20, 20, 0.75);
+  border-radius: 5px;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin: auto;
+  width: min-content;
+}
+.filter:hover, .filter:focus {
+  color: #141414;
+  border: 2px solid #2b29ba;
+  background-color: transparent;
+}
+.filter.active-filter {
+  pointer-events: none;
+  opacity: 0.5;
+  border: 2px solid #feed01;
+}
+
 footer {
   background: url("../images/footer.png");
   background-position: center top;
