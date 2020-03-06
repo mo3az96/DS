@@ -34,9 +34,15 @@ nav {
         padding: 35px 15px 15px;
         border-radius: 0 0 10px 10px;
 
+        @include xs {
+            padding: 15px 15px;
+            border-radius: 10px;
+        }
+
         &.active {
             pointer-events: none;
             background-color: $yellow;
+
 
             .nav-link {
                 color: $black;

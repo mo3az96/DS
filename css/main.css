@@ -194,6 +194,12 @@ nav .nav-li {
   padding: 35px 15px 15px;
   border-radius: 0 0 10px 10px;
 }
+@media (max-width: 767px) {
+  nav .nav-li {
+    padding: 15px 15px;
+    border-radius: 10px;
+  }
+}
 nav .nav-li.active {
   pointer-events: none;
   background-color: #feed01;
@@ -634,7 +640,8 @@ header {
 }
 @media (max-width: 767px) {
   .header {
-    padding-top: 10px;
+    padding-top: 20px;
+    align-items: center;
   }
 }
 
@@ -652,6 +659,7 @@ header {
 @media (max-width: 767px) {
   .logo {
     width: 100px;
+    padding: 0;
   }
 }
 
