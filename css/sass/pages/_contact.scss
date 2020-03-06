@@ -1,0 +1,165 @@
+.contact-cont {
+    padding-top: 85px;
+
+    @include xs {
+        padding-top: 35px;
+        padding-bottom: 50px;
+    }
+
+    .contact-title {
+        color: $black;
+        font-family: bold;
+        font-size: 30px;
+        margin-bottom: 25px;
+        text-align: center;
+
+        @include sm {
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 25px;
+        }
+    }
+}
+
+.contact-info {
+    padding-right: 25px;
+
+
+    #{$ltr} & {
+        padding-left: 25px;
+        padding-right: 0;
+    }
+
+    @include xs {
+        padding: 0;
+        margin-top: 50px;
+    }
+
+
+    ul {
+        margin-top: 50px;
+
+        @include xs {
+            margin: auto;
+            width: max-content;
+        }
+    }
+
+    li>a {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 15px;
+        color: $black;
+        font-size: 18px;
+        font-family: med;
+
+        span {
+            margin: 0 5px;
+        }
+
+        i {
+            font-size: 20px;
+            color: $yellow;
+            width: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .map {
+        margin-top: 25px;
+        height: 250px;
+    }
+}
+
+
+.contact-input {
+    height: 40px;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: $text;
+    border-radius: 10px;
+    border: 2px solid $text;
+    color: $black;
+    font-size: 17px;
+    border: 2px solid $text;
+    padding: 0 25px;
+    -moz-appearance: textfield;
+    @include transition(all 0.3s ease-in-out);
+
+    &::placeholder {
+        color: rgba($black, 0.52);
+        font-size: 17px;
+    }
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        -webkit-appearance: none
+    }
+
+    &:focus {
+        border-color: $yellow;
+    }
+}
+
+.contact-select {
+    height: 40px;
+    resize: none;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: $text;
+    border-radius: 10px;
+    border: 2px solid $text;
+    color: rgba($black, 0.52);
+    font-size: 17px;
+    border: 2px solid $text;
+    padding: 0 25px;
+    -moz-appearance: textfield;
+    @include transition(all 0.3s ease-in-out);
+
+    &::placeholder {
+        color: rgba($black, 0.52);
+        font-size: 17px;
+    }
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        -webkit-appearance: none
+    }
+
+    &:focus {
+        border-color: $yellow;
+    }
+}
+
+.contact-area {
+    height: 150px;
+    resize: none;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: $text;
+    border-radius: 10px;
+    border: 2px solid $text;
+    color: $black;
+    font-size: 17px;
+    border: 2px solid $text;
+    padding: 15px 25px;
+    -moz-appearance: textfield;
+    @include transition(all 0.3s ease-in-out);
+
+    &::placeholder {
+        color: rgba($black, 0.52);
+        font-size: 17px;
+    }
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        -webkit-appearance: none
+    }
+
+    &:focus {
+        border-color: $yellow;
+    }
+}

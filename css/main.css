@@ -1487,10 +1487,168 @@ main .join:hover {
   justify-content: center;
   overflow: hidden;
   padding: 10px;
+  margin: auto;
 }
 .clients-cont .item .client-img img {
   width: auto;
   max-height: 100%;
+}
+
+.contact-cont {
+  padding-top: 85px;
+}
+@media (max-width: 767px) {
+  .contact-cont {
+    padding-top: 35px;
+    padding-bottom: 50px;
+  }
+}
+.contact-cont .contact-title {
+  color: #141414;
+  font-family: bold;
+  font-size: 30px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .contact-cont .contact-title {
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 25px;
+  }
+}
+
+.contact-info {
+  padding-right: 25px;
+}
+html[dir=ltr] .contact-info {
+  padding-left: 25px;
+  padding-right: 0;
+}
+@media (max-width: 767px) {
+  .contact-info {
+    padding: 0;
+    margin-top: 50px;
+  }
+}
+.contact-info ul {
+  margin-top: 50px;
+}
+@media (max-width: 767px) {
+  .contact-info ul {
+    margin: auto;
+    width: max-content;
+  }
+}
+.contact-info li > a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 15px;
+  color: #141414;
+  font-size: 18px;
+  font-family: med;
+}
+.contact-info li > a span {
+  margin: 0 5px;
+}
+.contact-info li > a i {
+  font-size: 20px;
+  color: #feed01;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-info .map {
+  margin-top: 25px;
+  height: 250px;
+}
+
+.contact-input {
+  height: 40px;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  color: #141414;
+  font-size: 17px;
+  border: 2px solid #fff;
+  padding: 0 25px;
+  -moz-appearance: textfield;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.contact-input::placeholder {
+  color: rgba(20, 20, 20, 0.52);
+  font-size: 17px;
+}
+.contact-input::-webkit-inner-spin-button, .contact-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+.contact-input:focus {
+  border-color: #feed01;
+}
+
+.contact-select {
+  height: 40px;
+  resize: none;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  color: rgba(20, 20, 20, 0.52);
+  font-size: 17px;
+  border: 2px solid #fff;
+  padding: 0 25px;
+  -moz-appearance: textfield;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.contact-select::placeholder {
+  color: rgba(20, 20, 20, 0.52);
+  font-size: 17px;
+}
+.contact-select::-webkit-inner-spin-button, .contact-select::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+.contact-select:focus {
+  border-color: #feed01;
+}
+
+.contact-area {
+  height: 150px;
+  resize: none;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  color: #141414;
+  font-size: 17px;
+  border: 2px solid #fff;
+  padding: 15px 25px;
+  -moz-appearance: textfield;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.contact-area::placeholder {
+  color: rgba(20, 20, 20, 0.52);
+  font-size: 17px;
+}
+.contact-area::-webkit-inner-spin-button, .contact-area::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+.contact-area:focus {
+  border-color: #feed01;
 }
 
 footer {
