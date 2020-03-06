@@ -20,6 +20,33 @@ $(document).ready(function () {
         nav: false,
     });
     /////////Main Slider/////////
+    $('.clients-slider').owlCarousel({
+        items: 7,
+        stagePadding: 1,
+        margin: 31,
+        rtl: document.dir == 'rtl' ? true : false,
+        loop: true,
+        rewind: true,
+        // autoplay: false,
+        nav: true,
+        dots: false,
+        navText: ["<span class='icon-arrow-right'></span>", "<span class='icon-arrow-left'></span>"],
+        responsive: {
+            0: {
+                items: 2,
+            },
+            500: {
+                items: 4,
+            },
+            992: {
+                items: 5,
+            },
+            1200: {
+                items: 7
+            }
+        }
+    });
+    /////////Main Slider/////////
     $('.services-slider').owlCarousel({
         items: 3,
         center: true,

@@ -3,6 +3,10 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 115px;
+
+    @include xs {
+        flex-direction: column;
+    }
 }
 
 .home-about-text {
@@ -30,6 +34,7 @@
 
     @include xs {
         width: 100%;
+        margin: 0;
         margin-top: 25px;
     }
 }
@@ -54,10 +59,61 @@
 
         @include xs {
             width: 100%;
+            margin: 0;
         }
     }
 
     .home-about-info {
         margin-bottom: 15px;
     }
+}
+
+
+.clients-cont {
+    margin-top: 50px;
+
+    .owl-nav {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+
+        button[class^=owl-] {
+            outline: none;
+            border: none;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $text;
+            font-size: 30px;
+            @include transition(all 0.3s ease-in-out);
+            margin: 0 10px;
+
+            &:hover {
+                background-color: $yellow;
+            }
+        }
+    }
+
+    .item {
+        .client-img {
+            border: 1px solid #d4d5d9;
+            width: 137px;
+            height: 138px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 10px;
+
+            img {
+                width: auto;
+                max-height: 100%;
+            }
+        }
+    }
+
 }

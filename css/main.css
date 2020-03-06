@@ -992,7 +992,7 @@ header.page-head .logo {
 ol.breadcrumb {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100px;
   background-color: transparent;
   border: none;
@@ -1383,6 +1383,11 @@ main .join:hover {
   justify-content: space-between;
   margin-top: 115px;
 }
+@media (max-width: 767px) {
+  .home-about {
+    flex-direction: column;
+  }
+}
 
 .home-about-text {
   width: 40%;
@@ -1411,6 +1416,7 @@ main .join:hover {
 @media (max-width: 767px) {
   .home-about-img {
     width: 100%;
+    margin: 0;
     margin-top: 25px;
   }
 }
@@ -1436,10 +1442,55 @@ main .join:hover {
 @media (max-width: 767px) {
   .page-about-cont .home-about-text {
     width: 100%;
+    margin: 0;
   }
 }
 .page-about-cont .home-about-info {
   margin-bottom: 15px;
+}
+
+.clients-cont {
+  margin-top: 50px;
+}
+.clients-cont .owl-nav {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+.clients-cont .owl-nav button[class^=owl-] {
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  font-size: 30px;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin: 0 10px;
+}
+.clients-cont .owl-nav button[class^=owl-]:hover {
+  background-color: #feed01;
+}
+.clients-cont .item .client-img {
+  border: 1px solid #d4d5d9;
+  width: 137px;
+  height: 138px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10px;
+}
+.clients-cont .item .client-img img {
+  width: auto;
+  max-height: 100%;
 }
 
 footer {
