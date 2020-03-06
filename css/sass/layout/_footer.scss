@@ -1,0 +1,219 @@
+footer {
+    background: url("../images/footer.png");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 150px;
+    padding-top: 150px;
+    padding-bottom: 50px;
+
+    @include sm {
+        margin-top: 75px;
+        padding-top: 100px;
+    }
+
+    @include xs {
+        margin-top: 20px;
+        padding-top: 50px;
+    }
+
+    .footer-bg {
+        position: absolute;
+        left: 45%;
+        transform: translateX(-50%);
+        bottom: -10px;
+
+        @include sm {
+            display: none;
+        }
+    }
+
+    .foot-logo {
+        width: 220px;
+        display: flex;
+        align-items: center;
+
+        @include sm {
+            margin-bottom: 20px;
+        }
+
+        @include xs {
+            width: 150px;
+        }
+    }
+
+    .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include sm {
+            flex-direction: column;
+        }
+    }
+
+    .left-sec,
+    .right-sec {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left-sec {
+        @include sm {
+            order: 2;
+        }
+    }
+
+    .right-sec {
+        align-items: center;
+
+        @include sm {
+            order: 1;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+    }
+
+    .nav-foot {
+        display: flex;
+        flex-direction: column;
+        width: max-content;
+        flex-wrap: wrap;
+        height: 120px;
+
+        @include sm {
+            text-align: center;
+            margin: auto;
+        }
+
+        @include xs {
+            width: 60%;
+        }
+    }
+
+    .nav-foot-li {
+        margin-bottom: 15px;
+
+        &:nth-of-type(n+4) {
+            margin-left: 50px;
+        }
+
+        &:nth-of-type(3n) {
+            margin-bottom: 0;
+        }
+    }
+
+    .nav-foot-link {
+        font-size: 18px;
+        color: $text;
+        font-family: med;
+        @include transition(all 0.3s ease-in-out);
+
+        &:hover {
+            color: $yellow;
+        }
+    }
+
+    .links {
+        display: flex;
+        align-items: center;
+        margin-top: 25px;
+
+        .vision {
+            margin-left: 15px;
+
+            @include sm {
+                margin-left: 25px;
+            }
+        }
+    }
+}
+
+
+.copyright-cont {
+
+    background-color: $yellow;
+}
+
+.copright {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include sm {
+        padding: 30px 0 10px;
+        flex-direction: column;
+    }
+
+    p {
+        font-size: 16px;
+        color: $black;
+        font-family: med;
+        text-transform: uppercase;
+
+        @include sm {
+            margin: 5px 0;
+
+            &:last-of-type {
+                margin-top: 0;
+            }
+        }
+
+
+        a {
+            color: $blue;
+            @include transition(all 0.3s ease-in-out);
+
+            &:hover {
+                color: $black;
+            }
+        }
+    }
+
+    .right-div {
+        display: flex;
+        align-items: center;
+
+        @include sm {
+            order: 2;
+            flex-direction: column;
+        }
+
+        .BUGaia {
+            margin-left: 5px;
+        }
+    }
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+
+    @include sm {
+        order: 1;
+    }
+}
+
+.social-link {
+    border-radius: 5px;
+    background-color: $black;
+    margin: 0 3px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20.5px;
+    color: $yellow;
+    @include transition(all 0.3s ease-in-out);
+
+    &:hover {
+        color: $yellow;
+        background-color: $blue;
+    }
+}

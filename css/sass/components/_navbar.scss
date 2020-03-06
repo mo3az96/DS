@@ -1,0 +1,63 @@
+nav {
+    height: 100%;
+
+    @include xs {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $text;
+        z-index: 99;
+        display: none;
+    }
+
+    .nav-ul {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include xs {
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding-top: 100px;
+            justify-content: flex-start;
+        }
+    }
+
+    .nav-li {
+        padding: 15px 15px;
+        border-radius: 10px;
+
+        &.active {
+            pointer-events: none;
+            background-color: $yellow;
+
+            .nav-link {
+                color: $black;
+                font-family: bold;
+            }
+        }
+    }
+
+    .nav-link {
+        font-size: 17px;
+        font-family: med;
+        color: $text;
+        @include transition(all 0.3s ease-in-out);
+
+        @include xs {
+            color: $black;
+        }
+
+        &:hover {
+            color: $hover;
+        }
+
+    }
+}
