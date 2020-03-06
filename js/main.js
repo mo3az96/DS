@@ -146,7 +146,7 @@ $(document).ready(function () {
         };
     });
 
-    $('.join').click(function () {
+    $('.join,.model-open').click(function () {
         $(".model-fixed").fadeIn(400)
         $(".have-modal").addClass("show-modal");
         $("body").addClass("overflow");
