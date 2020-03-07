@@ -44,6 +44,7 @@ $(window).on("load", function () {
 
 });
 $(document).ready(function () {
+
     /////////Main Slider/////////
     $('.main-slider').owlCarousel({
         items: 1,
@@ -104,34 +105,7 @@ $(document).ready(function () {
             }
         }
     });
-    $('.filter-slider').owlCarousel({
-        items: 9,
-        stagePadding: 1,
-        margin: 31,
-        rtl: document.dir == 'rtl' ? true : false,
-        loop: false,
-        rewind: false,
-        autoplay: false,
-        nav: false,
-        dots: false,
-        responsive: {
-            0: {
-                items: 2,
-                margin: 15,
-                nav: true,
-                navText: ["<span class='icon-arrow-right'></span>", "<span class='icon-arrow-left'></span>"],
-            },
-            500: {
-                items: 4,
-            },
-            992: {
-                items: 5,
-            },
-            1200: {
-                items: 9
-            }
-        }
-    });
+
     $('.news-slider').owlCarousel({
         items: 1,
         margin: 30,
