@@ -56,6 +56,18 @@ $(document).ready(function () {
         nav: false,
     });
     /////////Main Slider/////////
+    $('.new-slider').owlCarousel({
+        items: 1,
+        margin: 30,
+        autoplay: false,
+        rtl: document.dir == 'rtl' ? true : false,
+        loop: true,
+        rewind: true,
+        dots: false,
+        nav: true,
+        navText: ["<span class='icon-arrow-right'></span>", "<span class='icon-arrow-left'></span>"],
+    });
+    /////////Main Slider/////////
     $('.clients-slider').owlCarousel({
         items: 7,
         stagePadding: 1,
@@ -135,6 +147,18 @@ $(document).ready(function () {
             loop: true,
             dots: true,
             nav: false
+        });
+        $(".sec-sec .news .new").wrap("<div class='item'></div>");
+        $(".sec-sec .news").addClass("owl-carousel");
+        $('.sec-sec .news').owlCarousel({
+            items: 1,
+            margin: 30,
+            rtl: document.dir == 'rtl' ? true : false,
+            loop: true,
+            rewind: true,
+            autoplay: false,
+            nav: false,
+            dots: true,
         });
     }
     $(' .input').focus(function () {

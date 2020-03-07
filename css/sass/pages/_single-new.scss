@@ -1,0 +1,270 @@
+.new-cont {
+    padding-top: 85px;
+
+    @include xs {
+        padding-top: 35px;
+        padding-bottom: 50px;
+    }
+}
+
+.single-new {
+    .new-title {
+        color: $black;
+        font-family: bold;
+        font-size: 30px;
+        margin-bottom: 50px;
+        position: relative;
+        text-align: center;
+
+        @include sm {
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 25px;
+        }
+    }
+}
+
+.first-sec {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    flex-direction: column;
+
+}
+
+.sec-sec {
+    .news {
+        flex-direction: column;
+
+        .new {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            margin: 0;
+            margin-bottom: 25px;
+            align-items: flex-start;
+
+            .news-img {
+                width: 100%;
+                height: 360px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .news-name {
+            color: $black;
+            font-size: 16px;
+            margin-top: 10px;
+
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+}
+
+.new-slider-sec {
+    width: 100%;
+    margin-left: 15px;
+
+
+
+    @include xs {
+        width: 100%;
+        margin: 0;
+        margin-top: 15px;
+        order: 2;
+    }
+
+
+
+    .slider-img {
+        display: flex;
+        align-items: center;
+        height: 360px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .owl-nav {
+        width: 0;
+        height: 0;
+
+        button[class^=owl-] {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            outline: none;
+            border: none;
+            color: rgba($black, 0.75);
+            font-size: 18px;
+            @include transition(all 0.3s ease-in-out);
+
+            &.owl-next {
+                left: 15px;
+            }
+
+            &.owl-prev {
+                right: 15px;
+            }
+
+            &:hover {
+                color: $yellow;
+            }
+        }
+    }
+
+
+}
+
+.main-info {
+    width: 100%;
+    margin-top: 15px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #afafaf;
+
+
+
+    @include xs {
+        width: 100%;
+        margin: 0;
+        margin-top: 15px;
+        order: 1;
+    }
+
+    .owner-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .date {
+        font-size: 16px;
+        color: $black;
+
+    }
+
+    .owner {
+        font-size: 18px;
+        font-family: med;
+        color: $black;
+        margin: 0 15px;
+    }
+
+    .views {
+        font-size: 16px;
+        color: $black;
+        display: inline-flex;
+        align-items: center;
+        margin: 0 15px;
+
+        i {
+            font-size: 18px;
+            color: $yellow;
+            margin: 0 5px;
+        }
+    }
+
+    .social {
+        margin-top: 25px;
+        justify-content: flex-start;
+    }
+
+    .social-link {
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        margin: 0 5px;
+
+        &:hover {
+            background-color: transparent;
+            color: $yellow;
+        }
+    }
+}
+
+.blog-info {
+    color: $black;
+    font-family: med;
+    font-size: 17px;
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.sec-sec {
+    .social {
+        justify-content: flex-start;
+        padding: 30px 0;
+        border-bottom: 1px solid #afafaf;
+        border-top: 1px solid #afafaf;
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+
+        &>span {
+            font-size: 17px;
+            color: $black;
+            font-family: med;
+            margin-left: 13px;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        .social-link {
+            margin: 0 5px;
+        }
+    }
+
+    .news {
+        .owl-dots {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .owl-dot {
+                outline: none !important;
+
+                span {
+                    width: 11px;
+                    height: 11px;
+                    background-color: $hover;
+                    display: block;
+                    border-radius: 8px;
+                    margin: 0 3px;
+                    @include transition(all 0.3s ease-in-out);
+
+                    @include xs {
+                        margin: 0 4px;
+                    }
+
+                    &:hover {
+                        background-color: $blue;
+                    }
+                }
+
+                &.active {
+                    span {
+                        width: 30px;
+                        background-color: $blue;
+                    }
+                }
+            }
+        }
+    }
+}
