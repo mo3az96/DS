@@ -45,6 +45,31 @@ $(window).on("load", function () {
 });
 $(document).ready(function () {
 
+
+    $('.filters').owlCarousel({
+        loop: true,
+        margin: 10,
+        responsiveClass: true,
+        rtl: document.dir == 'rtl' ? true : false,
+        nav: false,
+        dots: false,
+        responsive: {
+            0: {
+                items: 2,
+                nav: true,
+                navText: ["<span class='icon-arrow-right'></span>", "<span class='icon-arrow-left'></span>"],
+            },
+            600: {
+                items: 5,
+                nav: false
+            },
+            1000: {
+                items: 8,
+                loop: false
+            }
+        }
+    })
+
     /////////Main Slider/////////
     $('.main-slider').owlCarousel({
         items: 1,
