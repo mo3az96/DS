@@ -11,7 +11,7 @@
     .new-title {
         color: $black;
         font-family: bold;
-        font-size: 30px;
+        font-size: 20px;
         margin-bottom: 50px;
         position: relative;
         text-align: center;
@@ -173,7 +173,7 @@
 
         i {
             font-size: 18px;
-            color: $yellow;
+            color: $blue;
             margin: 0 5px;
         }
     }
@@ -264,6 +264,16 @@
                         background-color: $blue;
                     }
                 }
+            }
+        }
+
+        .new {
+            padding: 20px 20px 10px;
+            background-color: #fff;
+            border-radius: 10px;
+
+            .news-img {
+                height: 250px;
             }
         }
     }

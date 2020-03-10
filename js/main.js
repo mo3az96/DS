@@ -5,7 +5,6 @@ $(window).on("load", function () {
         $('body').animate({
             scrollTop: 0
         }, 1);
-        new WOW().init();
     });
 
 
@@ -82,7 +81,7 @@ $(document).ready(function () {
     });
     /////////Main Slider/////////
     $('.new-slider').owlCarousel({
-        items: 1,
+        items: 3,
         margin: 30,
         autoplay: false,
         rtl: document.dir == 'rtl' ? true : false,
@@ -143,14 +142,31 @@ $(document).ready(function () {
         }
     });
 
+    /////////news Slider/////////
     $('.news-slider').owlCarousel({
-        items: 1,
+        items: 3,
         margin: 30,
-        // autoplay: true,
         rtl: document.dir == 'rtl' ? true : false,
-        loop: true,
+        loop: false,
+        rewind: false,
+        autoplay: false,
+        nav: false,
         dots: true,
-        nav: false
+        responsive: {
+            0: {
+                items: 1,
+                dots: true,
+                loop: true,
+                rewind: true,
+            },
+            500: {
+                items: 2,
+                dots: true,
+            },
+            1000: {
+                items: 3,
+            },
+        }
     });
 
 

@@ -9,7 +9,7 @@
     .contact-title {
         color: $black;
         font-family: bold;
-        font-size: 30px;
+        font-size: 20px;
         margin-bottom: 25px;
         text-align: center;
 
@@ -56,7 +56,7 @@
         justify-content: flex-start;
         margin-top: 15px;
         color: $black;
-        font-size: 18px;
+        font-size: 16px;
         font-family: med;
 
         span {
@@ -64,8 +64,8 @@
         }
 
         i {
-            font-size: 20px;
-            color: $yellow;
+            font-size: 18px;
+            color: $blue;
             width: 20px;
             display: flex;
             align-items: center;
@@ -73,12 +73,7 @@
         }
     }
 
-    .map {
-        margin-top: 25px;
-        height: 250px;
-        border-radius: 10px;
-        overflow: hidden;
-    }
+
 }
 
 
@@ -169,4 +164,17 @@
     &:focus {
         border-color: $yellow;
     }
+}
+
+.map {
+    height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+    transform: translateY(130px);
+    z-index: 9;
+    position: relative;
+}
+
+.contact-footer {
+    margin: 0;
 }

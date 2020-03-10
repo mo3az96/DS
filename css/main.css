@@ -54,7 +54,7 @@
 
 body {
   position: relative;
-  font-family: tajwal;
+  font-family: reg;
   background-color: #eaebef;
   overflow: hidden;
 }
@@ -77,23 +77,47 @@ html {
 }
 
 @font-face {
-  font-family: "tajwal";
-  src: url("../fonts/TAJAWAL/TAJAWAL-REGULAR.TTF");
+  font-family: "reg";
+  src: url("../fonts/pop/POPPINS-REGULAR.TTF");
+}
+@font-face {
+  font-family: "light";
+  src: url("../fonts/pop/POPPINS-LIGHT.TTF");
 }
 @font-face {
   font-family: "med";
-  src: url("../fonts/TAJAWAL/TAJAWAL-MEDIUM.TTF");
+  src: url("../fonts/pop/POPPINS-MEDIUM.TTF");
+}
+@font-face {
+  font-family: "semibold";
+  src: url("../fonts/pop/Poppins-SemiBold.ttf");
 }
 @font-face {
   font-family: "bold";
+  src: url("../fonts/pop/POPPINS-BOLD.TTF");
+}
+@font-face {
+  font-family: "exbold";
+  src: url("../fonts/pop/POPPINS-EXTRABOLD.TTF");
+}
+@font-face {
+  font-family: "ar";
+  src: url("../fonts/TAJAWAL/TAJAWAL-REGULAR.TTF");
+}
+@font-face {
+  font-family: "ar-light";
+  src: url("../fonts/TAJAWAL/TAJAWAL-LIGHT.TTF");
+}
+@font-face {
+  font-family: "ar-med";
+  src: url("../fonts/TAJAWAL/TAJAWAL-MEDIUM.TTF");
+}
+@font-face {
+  font-family: "ar-bold";
   src: url("../fonts/TAJAWAL/TAJAWAL-BOLD.TTF");
 }
 @font-face {
-  font-family: "black";
-  src: url("../fonts/TAJAWAL/TAJAWAL-BLACK.TTF");
-}
-@font-face {
-  font-family: "ex";
+  font-family: "ar-exbold";
   src: url("../fonts/TAJAWAL/TAJAWAL-EXTRABOLD.TTF");
 }
 .newsletter-cont {
@@ -230,7 +254,7 @@ html[dir=ltr] .input {
   background-color: #feed01;
   border-radius: 10px;
   margin: auto;
-  font-size: 20px;
+  font-size: 16px;
   color: #141414;
   font-family: bold;
   -moz-transition: all 0.3s ease-in-out;
@@ -458,7 +482,7 @@ nav .nav-link:hover {
   transition: all 0.3s ease-in-out;
 }
 .services-slider .item-info .service-name {
-  font-size: 20px;
+  font-size: 18px;
   font-family: bold;
   color: #141414;
   text-align: center;
@@ -474,18 +498,18 @@ nav .nav-link:hover {
   transition: all 0.3s ease-in-out;
 }
 .services-slider .item-info .service-desc {
-  font-size: 16px;
+  font-size: 14px;
   color: #141414;
   text-align: center;
   text-align: justify;
-  max-height: 88px;
+  max-height: 80px;
   overflow: hidden;
 }
 .services-slider .item-info .read {
   position: absolute;
   right: 40px;
   bottom: 25px;
-  font-size: 20px;
+  font-size: 16px;
   font-family: bold;
   color: #141414;
   -moz-transition: all 0.3s ease-in-out;
@@ -586,80 +610,82 @@ nav .nav-link:hover {
 .news-cont .sec-head {
   color: #fff;
 }
-.news-cont .item {
-  display: flex;
-  align-items: flex-start;
-  background-color: #fff;
-  padding: 50px 20px;
-  border-radius: 10px;
-  width: 75%;
-  margin: auto;
+.news-cont .new .new-img {
+  width: 390px;
+  height: 244px;
+  max-width: 100%;
   position: relative;
-}
-@media (max-width: 992px) {
-  .news-cont .item {
-    padding-top: 20px;
-    width: 100%;
-    flex-direction: column;
-    padding-bottom: 75px;
-  }
-}
-.news-cont .item-img {
-  margin-right: 30px;
-  min-width: 387px;
-  border-radius: 10px;
-  height: 257px;
   overflow: hidden;
+  display: block;
 }
-@media (max-width: 992px) {
-  .news-cont .item-img {
-    width: 100%;
-    min-width: auto;
-    margin-bottom: 20px;
-  }
-}
-.news-cont .item-img img {
+.news-cont .new .new-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  backface-visibility: hidden;
 }
-.news-cont .news-name {
-  font-size: 20px;
-  font-family: bold;
-  color: #141414;
-  margin-bottom: 40px;
+.news-cont .new .new-img:hover img {
+  transform: scale(1.05);
 }
-@media (max-width: 992px) {
-  .news-cont .news-name {
-    margin-bottom: 25px;
-    text-align: center;
-  }
-}
-.news-cont .news-desc {
-  font-size: 16px;
-  color: #141414;
-  text-align: center;
-  text-align: justify;
-}
-.news-cont .read {
+.news-cont .new .date {
   position: absolute;
-  right: 20px;
-  bottom: 25px;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(20, 20, 20, 0.75);
+  color: #fff;
+  font-family: med;
+}
+html[dir=ltr] .news-cont .new .date {
+  left: 10px;
+  right: auto;
+}
+.news-cont .new .day {
+  font-size: 24px;
+  line-height: 1.083;
+}
+.news-cont .new .mounth {
+  font-size: 12px;
+  line-height: 1.083;
+}
+.news-cont .new .new-name {
+  font-family: med;
+  color: #fff;
   font-size: 20px;
-  font-family: bold;
-  color: #141414;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 30px;
+  display: block;
+  width: max-content;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.news-cont .read:hover {
+.news-cont .new .new-name:hover {
   color: #2b29ba;
 }
-@media (max-width: 992px) {
-  .news-cont .read {
-    bottom: 20px;
-  }
+.news-cont .new .new-desc {
+  line-height: 1.75;
+  color: #fff;
+  font-size: 16px;
+  text-align: justify;
+  margin-top: 11px;
 }
 .news-cont .owl-dots {
   position: absolute;
@@ -728,7 +754,7 @@ nav .nav-link:hover {
   outline: none;
   border: none;
   color: rgba(20, 20, 20, 0.75);
-  font-size: 18px;
+  font-size: 16px;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -1090,7 +1116,7 @@ ol.breadcrumb li a:hover {
 }
 
 .sec-head {
-  font-size: 70px;
+  font-size: 35px;
   color: #141414;
   text-align: center;
   text-transform: uppercase;
@@ -1109,11 +1135,11 @@ ol.breadcrumb li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
   background-color: #feed01;
   color: #141414;
-  font-family: black;
+  font-family: bold;
   z-index: 3;
   position: relative;
   border-radius: 10px;
@@ -1148,7 +1174,7 @@ main {
 }
 @media (max-width: 1400px) {
   main {
-    padding-top: 200px;
+    padding-top: 100px;
   }
 }
 @media (max-width: 767px) {
@@ -1163,18 +1189,26 @@ main .main {
   justify-content: center;
   flex-direction: column;
 }
+@media (max-width: 1400px) {
+  main .main {
+    height: calc(100vh - 200px);
+    align-items: center;
+  }
+}
 @media (max-width: 992px) {
   main .main {
+    height: auto;
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
   }
 }
 main .main-head {
-  font-size: 72px;
-  font-family: black;
+  font-size: 60px;
+  font-family: exbold;
   color: #fff;
   white-space: nowrap;
+  text-transform: uppercase;
 }
 @media (max-width: 767px) {
   main .main-head {
@@ -1295,7 +1329,7 @@ main .join:hover {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  font-size: 2.5vw;
+  font-size: 2vw;
   line-height: 1;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -1461,7 +1495,7 @@ main .join:hover {
 .home-about-info {
   color: #141414;
   font-family: med;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.7;
   text-align: justify;
 }
@@ -1566,7 +1600,7 @@ main .join:hover {
 .contact-cont .contact-title {
   color: #141414;
   font-family: bold;
-  font-size: 30px;
+  font-size: 20px;
   margin-bottom: 25px;
   text-align: center;
 }
@@ -1612,25 +1646,19 @@ html[dir=ltr] .contact-info {
   justify-content: flex-start;
   margin-top: 15px;
   color: #141414;
-  font-size: 18px;
+  font-size: 16px;
   font-family: med;
 }
 .contact-info li > a span {
   margin: 0 5px;
 }
 .contact-info li > a i {
-  font-size: 20px;
-  color: #feed01;
+  font-size: 18px;
+  color: #2b29ba;
   width: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.contact-info .map {
-  margin-top: 25px;
-  height: 250px;
-  border-radius: 10px;
-  overflow: hidden;
 }
 
 .contact-input {
@@ -1719,6 +1747,19 @@ html[dir=ltr] .contact-info {
   border-color: #feed01;
 }
 
+.map {
+  height: 450px;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: translateY(130px);
+  z-index: 9;
+  position: relative;
+}
+
+.contact-footer {
+  margin: 0;
+}
+
 .services-page-cont .more:hover {
   color: #141414;
 }
@@ -1804,7 +1845,7 @@ html[dir=ltr] .contact-info {
   transition: all 0.3s ease-in-out;
 }
 .services-item .item-info .service-name {
-  font-size: 20px;
+  font-size: 18px;
   font-family: bold;
   color: #141414;
   text-align: center;
@@ -1820,18 +1861,18 @@ html[dir=ltr] .contact-info {
   transition: all 0.3s ease-in-out;
 }
 .services-item .item-info .service-desc {
-  font-size: 16px;
+  font-size: 14px;
   color: #141414;
   text-align: center;
   text-align: justify;
-  max-height: 88px;
+  max-height: 80px;
   overflow: hidden;
 }
 .services-item .item-info .read {
   position: absolute;
   right: 40px;
   bottom: 25px;
-  font-size: 20px;
+  font-size: 16px;
   font-family: bold;
   color: #141414;
   -moz-transition: all 0.3s ease-in-out;
@@ -1912,7 +1953,7 @@ html[dir=ltr] .contact-info {
 
 .btn-open {
   display: flex;
-  font-size: 20px;
+  font-size: 14px;
   font-family: med;
   color: #fff;
   width: 170px;
@@ -1961,7 +2002,7 @@ html[dir=ltr] .contact-info {
 }
 
 .single-desc {
-  font-size: 18px;
+  font-size: 14px;
   text-align: justify;
   line-height: 1.5;
   margin-bottom: 25px;
@@ -2134,14 +2175,14 @@ html[dir=ltr] .contact-info {
   object-fit: cover;
 }
 .news-page-cont .news-name {
-  font-size: 20px;
+  font-size: 18px;
   font-family: bold;
   color: #141414;
   margin-bottom: 15px;
   margin-top: 25px;
 }
 .news-page-cont .news-desc {
-  font-size: 16px;
+  font-size: 14px;
   color: #141414;
   text-align: center;
   text-align: justify;
@@ -2150,7 +2191,7 @@ html[dir=ltr] .contact-info {
   position: absolute;
   right: 20px;
   bottom: 25px;
-  font-size: 20px;
+  font-size: 16px;
   font-family: bold;
   color: #141414;
   -moz-transition: all 0.3s ease-in-out;
@@ -2180,7 +2221,7 @@ html[dir=ltr] .contact-info {
 .single-new .new-title {
   color: #141414;
   font-family: bold;
-  font-size: 30px;
+  font-size: 20px;
   margin-bottom: 50px;
   position: relative;
   text-align: center;
@@ -2319,7 +2360,7 @@ html[dir=ltr] .contact-info {
 }
 .main-info .views i {
   font-size: 18px;
-  color: #feed01;
+  color: #2b29ba;
   margin: 0 5px;
 }
 .main-info .social {
@@ -2399,6 +2440,14 @@ html[dir=ltr] .contact-info {
 .sec-sec .news .owl-dots .owl-dot.active span {
   width: 30px;
   background-color: #2b29ba;
+}
+.sec-sec .news .new {
+  padding: 20px 20px 10px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.sec-sec .news .new .news-img {
+  height: 250px;
 }
 
 footer {
@@ -2563,7 +2612,6 @@ footer .links .vision {
 .copright p {
   font-size: 16px;
   color: #141414;
-  font-family: med;
   text-transform: uppercase;
 }
 @media (max-width: 992px) {

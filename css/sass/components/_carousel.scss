@@ -166,7 +166,7 @@
         @include transition(all 0.3s ease-in-out);
 
         .service-name {
-            font-size: 20px;
+            font-size: 18px;
             font-family: bold;
             color: $black;
             text-align: center;
@@ -180,11 +180,11 @@
         }
 
         .service-desc {
-            font-size: 16px;
+            font-size: 14px;
             color: $black;
             text-align: center;
             text-align: justify;
-            max-height: 88px;
+            max-height: 80px;
             overflow: hidden;
         }
 
@@ -192,7 +192,7 @@
             position: absolute;
             right: 40px;
             bottom: 25px;
-            font-size: 20px;
+            font-size: 16px;
             font-family: bold;
             color: $black;
             @include transition(all 0.3s ease-in-out);
@@ -291,81 +291,88 @@
     }
 
 
-    .item {
-        display: flex;
-        align-items: flex-start;
-        background-color: $text;
-        padding: 50px 20px;
-        border-radius: 10px;
-        width: 75%;
-        margin: auto;
-        position: relative;
+    .new {
+        .new-img {
+            width: 390px;
+            height: 244px;
+            max-width: 100%;
+            position: relative;
+            overflow: hidden;
+            display: block;
 
-        @include sm {
-            padding-top: 20px;
-            width: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                @include transition(all 0.5s ease-in-out);
+                backface-visibility: hidden;
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        .date {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             flex-direction: column;
-            padding-bottom: 75px;
+            background-color: rgba($black, 0.75);
+            color: #fff;
+            font-family: med;
+
+            #{$ltr} & {
+                left: 10px;
+                right: auto;
+            }
+        }
+
+        .day {
+            font-size: 24px;
+            line-height: 1.083;
+        }
+
+        .mounth {
+            font-size: 12px;
+            line-height: 1.083;
+        }
+
+        .new-name {
+            font-family: med;
+            color: $text;
+            font-size: 20px;
+            @include transition(all 0.3s ease-in-out);
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-top: 30px;
+            display: block;
+            width: max-content;
+            @include transition(all 0.3s ease-in-out);
+
+            &:hover {
+                color: $blue;
+            }
+        }
+
+        .new-desc {
+            line-height: 1.75;
+            color: $text;
+            font-size: 16px;
+            text-align: justify;
+            margin-top: 11px;
         }
     }
 
-    .item-img {
-        margin-right: 30px;
-        min-width: 387px;
-        border-radius: 10px;
-        height: 257px;
-        overflow: hidden;
-
-        @include sm {
-            width: 100%;
-            min-width: auto;
-            margin-bottom: 20px;
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-
-    .news-name {
-        font-size: 20px;
-        font-family: bold;
-        color: $black;
-        margin-bottom: 40px;
-
-
-        @include sm {
-            margin-bottom: 25px;
-            text-align: center;
-        }
-    }
-
-    .news-desc {
-        font-size: 16px;
-        color: $black;
-        text-align: center;
-        text-align: justify;
-    }
-
-    .read {
-        position: absolute;
-        right: 20px;
-        bottom: 25px;
-        font-size: 20px;
-        font-family: bold;
-        color: $black;
-        @include transition(all 0.3s ease-in-out);
-
-        &:hover {
-            color: $blue;
-        }
-
-        @include sm {
-            bottom: 20px;
-        }
-    }
 
     .owl-dots {
         position: absolute;
@@ -439,7 +446,7 @@
             outline: none;
             border: none;
             color: rgba($black, 0.75);
-            font-size: 18px;
+            font-size: 16px;
             @include transition(all 0.3s ease-in-out);
 
             &.owl-next {

@@ -72,7 +72,7 @@
     }
 
     .news-name {
-        font-size: 20px;
+        font-size: 18px;
         font-family: bold;
         color: $black;
         margin-bottom: 15px;
@@ -80,7 +80,7 @@
     }
 
     .news-desc {
-        font-size: 16px;
+        font-size: 14px;
         color: $black;
         text-align: center;
         text-align: justify;
@@ -90,7 +90,7 @@
         position: absolute;
         right: 20px;
         bottom: 25px;
-        font-size: 20px;
+        font-size: 16px;
         font-family: bold;
         color: $black;
         @include transition(all 0.3s ease-in-out);
