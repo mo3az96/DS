@@ -9,7 +9,7 @@ $(window).on("load", function () {
 
 
     //map
-    var adresse = "";
+    var adresse = "<img style='width:50px; text-align: left; display:inline-block; margin-right: 10px; vertical-align: sub;' src='img/logo.png'> <div style='display:inline-block;'>DesignStaion<br>0540000000<br>info@DesignStaion.sa</div>";
 
 
     var location = [adresse[0], $("#map").attr("lat"), $("#map").attr("long")];

@@ -4,6 +4,10 @@ body {
     background-color: $grey;
     overflow: hidden;
 
+    #{$rtl} & {
+        font-family: 'ar';
+    }
+
     &::-webkit-scrollbar {
         background-color: rgba($grey, 0.5);
         width: 7px;

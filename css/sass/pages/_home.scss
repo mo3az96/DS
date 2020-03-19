@@ -8,6 +8,10 @@
     @include xs {
         font-size: 50px;
     }
+
+    #{$rtl} & {
+        font-family: 'ar-bold';
+    }
 }
 
 .more {
@@ -42,14 +46,24 @@
     @include xs {
         width: 100%;
     }
+
+    #{$rtl} & {
+        font-family: 'ar-bold';
+    }
 }
 
 main {
-    background: url("../images/maincurve.png");
+    background: url("../images/maincurve-en.png");
     background-position: center bottom;
     background-size: cover;
     height: 100vh;
     padding-top: 350px;
+
+    #{$rtl} & {
+        background: url("../images/maincurve-ar.png");
+        background-position: center bottom;
+        background-size: cover;
+    }
 
     @include lg {
         padding-top: 100px;
@@ -85,6 +99,10 @@ main {
         color: $text;
         white-space: nowrap;
         text-transform: uppercase;
+
+        #{$rtl} & {
+            font-family: 'ar-exbold';
+        }
 
         @include xs {
             font-size: 50px;
@@ -130,6 +148,10 @@ main {
 
         @include xs {
             margin-top: 15px;
+        }
+
+        #{$rtl} & {
+            font-family: 'ar-med';
         }
     }
 }

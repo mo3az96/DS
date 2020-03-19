@@ -21,11 +21,18 @@
     background-color: $text;
     text-align: left;
 
+    #{$rtl} & {
+        text-align: right;
+    }
 
     &::placeholder {
         color: rgba($black, 0.52);
         font-size: 17px;
         text-align: left;
+
+        #{$rtl} & {
+            text-align: right;
+        }
     }
 
 
@@ -57,6 +64,16 @@
     &:after {
         font-family: 'icomoon' !important;
         content: "\e907";
+    }
+
+    #{$rtl} & {
+        left: 20px;
+        right: auto;
+
+        &:after {
+            font-family: 'icomoon' !important;
+            content: "\e908";
+        }
     }
 
 }
@@ -109,6 +126,11 @@
     color: rgba($black, 0.52);
     font-size: 16px;
     transition: 0.2s ease all;
+
+    #{$rtl} & {
+        left: auto;
+        right: 0;
+    }
 }
 
 .label-active {
@@ -116,6 +138,11 @@
     left: 0;
     font-size: 13px;
     color: $black;
+
+    #{$rtl} & {
+        left: auto;
+        right: 0;
+    }
 }
 
 .textarea-label {
@@ -155,5 +182,9 @@
     &:hover {
         background-color: transparent;
 
+    }
+
+    #{$rtl} & {
+        font-family: ar-med;
     }
 }

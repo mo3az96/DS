@@ -103,6 +103,11 @@ footer {
 
         &:nth-of-type(n+4) {
             margin-left: 50px;
+
+            #{$rtl} & {
+                margin-right: 50px;
+                margin-left: 0;
+            }
         }
 
         &:nth-of-type(3n) {
@@ -118,6 +123,10 @@ footer {
 
         &:hover {
             color: $yellow;
+        }
+
+        #{$rtl} & {
+            font-family: ar-med;
         }
     }
 
@@ -136,8 +145,18 @@ footer {
         .vision {
             margin-left: 15px;
 
+            #{$rtl} & {
+                margin-left: 0;
+                margin-right: 15px;
+            }
+
             @include sm {
                 margin-left: 25px;
+
+                #{$rtl} & {
+                    margin-left: 0;
+                    margin-right: 25px;
+                }
             }
         }
     }

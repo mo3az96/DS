@@ -46,7 +46,6 @@ nav {
 
             .nav-link {
                 color: $black;
-                font-family: bold;
             }
         }
     }
@@ -63,6 +62,10 @@ nav {
 
         &:hover {
             color: $hover;
+        }
+
+        #{$rtl} & {
+            font-family: 'ar-med';
         }
 
     }
