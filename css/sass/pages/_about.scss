@@ -23,6 +23,10 @@
     font-size: 16px;
     line-height: 1.7;
     text-align: justify;
+
+    #{$rtl} & {
+        font-family: ar;
+    }
 }
 
 .home-about-img {
@@ -32,11 +36,23 @@
     align-items: center;
     justify-content: flex-end;
 
+    #{$rtl} & {
+        margin-right: 30px;
+        margin-left: 0;
+    }
+
     @include xs {
         width: 100%;
         margin: 0;
         margin-top: 25px;
+
+        #{$rtl} & {
+            margin: 0;
+            margin-top: 25px;
+        }
     }
+
+
 }
 
 .page-about-cont {
@@ -57,9 +73,18 @@
         margin-top: 50px;
         margin-right: 30px;
 
+        #{$rtl} & {
+            margin-right: 0;
+            margin-left: 30px;
+        }
+
         @include xs {
             width: 100%;
             margin: 0;
+
+            #{$rtl} & {
+                margin: 0;
+            }
         }
     }
 

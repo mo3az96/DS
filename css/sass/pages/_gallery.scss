@@ -8,6 +8,11 @@
         margin-bottom: 30px;
         margin-right: 15px;
 
+        #{$rtl} & {
+            margin-left: 15px;
+            margin-right: 0;
+        }
+
         @include sm {
             width: calc(100% / 2 - 15px);
         }
@@ -16,21 +21,41 @@
             width: 100%;
             margin: 0;
             margin-bottom: 15px;
+
+            #{$rtl} & {
+                margin-left: 0;
+                margin-right: 0;
+            }
         }
 
         &:nth-of-type(3n) {
             @include sm {
                 margin-right: 15px;
+
+                #{$rtl} & {
+                    margin-left: 15px;
+                    margin-right: 0;
+                }
             }
 
             @include xs {
                 margin-right: 0;
+
+                #{$rtl} & {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
             }
         }
 
         &:nth-of-type(2n) {
             @include sm {
                 margin-right: 0;
+
+                #{$rtl} & {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
             }
         }
     }

@@ -21,13 +21,28 @@
             margin-right: 15px;
             margin-bottom: 15px;
 
+            #{$rtl} & {
+                margin-right: 0;
+                margin-left: 15px;
+            }
+
             &:nth-of-type(2n) {
                 margin-right: 0;
+
+                #{$rtl} & {
+                    margin-right: 0;
+                    margin-left: 0;
+                }
             }
 
             @include xs {
                 width: 100%;
                 margin-right: 0;
+
+                #{$rtl} & {
+                    margin-right: 0;
+                    margin-left: 0;
+                }
             }
         }
     }
@@ -58,6 +73,10 @@
         height: 257px;
         overflow: hidden;
 
+        #{$rtl} & {
+            margin-right: 0;
+        }
+
         @include sm {
             width: 100%;
             min-width: auto;
@@ -77,6 +96,10 @@
         color: $black;
         margin-bottom: 15px;
         margin-top: 25px;
+
+        #{$rtl} & {
+            font-family: ar-bold;
+        }
     }
 
     .news-desc {
@@ -101,6 +124,12 @@
 
         @include sm {
             bottom: 20px;
+        }
+
+        #{$rtl} & {
+            font-family: ar-bold;
+            right: auto;
+            left: 20px;
         }
     }
 }

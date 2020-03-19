@@ -21,6 +21,10 @@
             text-align: center;
             font-size: 25px;
         }
+
+        #{$rtl} & {
+            font-family: ar-bold;
+        }
     }
 }
 
@@ -75,12 +79,22 @@
     margin-left: 15px;
 
 
+    #{$rtl} & {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+
 
     @include xs {
         width: 100%;
         margin: 0;
         margin-top: 15px;
         order: 2;
+
+        #{$rtl} & {
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
 
 
@@ -162,6 +176,10 @@
         font-family: med;
         color: $black;
         margin: 0 15px;
+
+        #{$rtl} & {
+            font-family: ar-med;
+        }
     }
 
     .views {
@@ -204,6 +222,10 @@
     line-height: 1.7;
     text-align: justify;
     margin-bottom: 15px;
+
+    #{$rtl} & {
+        font-family: ar-med;
+    }
 }
 
 .sec-sec {
@@ -223,6 +245,10 @@
             margin-left: 13px;
             margin-bottom: 0;
             margin-top: 0;
+
+            #{$rtl} & {
+                font-family: ar-med;
+            }
         }
 
         .social-link {

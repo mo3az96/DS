@@ -81,7 +81,7 @@ $(document).ready(function () {
     });
     /////////Main Slider/////////
     $('.new-slider').owlCarousel({
-        items: 3,
+        items: 1,
         margin: 30,
         autoplay: false,
         rtl: document.dir == 'rtl' ? true : false,

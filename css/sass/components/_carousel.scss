@@ -502,6 +502,11 @@
     @include transition(all 0.3s ease-in-out);
     margin: auto;
 
+    #{$rtl} & {
+        font-family: ar;
+        width: 110px;
+    }
+
     &:hover,
     &:focus {
         color: $black;

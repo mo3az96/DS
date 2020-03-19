@@ -197,6 +197,11 @@ footer {
             color: $blue;
             @include transition(all 0.3s ease-in-out);
 
+            #{$rtl} & {
+                margin-right: 5px;
+                margin-left: 0;
+            }
+
             &:hover {
                 color: $black;
             }
@@ -214,6 +219,12 @@ footer {
 
         .BUGaia {
             margin-left: 5px;
+
+            #{$rtl} & {
+                margin-right: 5px;
+                margin-left: 0;
+            }
+
         }
     }
 }

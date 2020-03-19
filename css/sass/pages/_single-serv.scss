@@ -44,6 +44,10 @@
     position: absolute;
     top: 50px;
 
+    #{$rtl} & {
+        font-family: 'ar-med';
+    }
+
     @include xs {
         position: relative;
         top: auto;
